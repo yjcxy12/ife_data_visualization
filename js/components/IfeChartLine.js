@@ -4,12 +4,12 @@ var React = require('../bower_components/react/react');
 var Chart = require('../services/Chart');
 var Data = require('../services/Data');
 
-var IfeChartRound = React.createClass({
-	displayName: 'IfeChartRound',
+var IfeChartLine = React.createClass({
+	displayName: 'IfeChartLine',
 
 	getInitialState: function getInitialState() {
 		return {
-			tab: 'donut'
+			tab: 'line'
 		};
 	},
 
@@ -28,13 +28,13 @@ var IfeChartRound = React.createClass({
 	},
 
 	drawChart: function drawChart() {
-		if (this.state.tab === 'pie') {
-			Data.getAqiPie(this.props.city).then(function (data) {
-				Chart.drawPieChart('round-chart-display', data);
+		if (this.state.tab === 'bar') {
+			Data.getAqiBar(this.props.city).then(function (data) {
+				Chart.drawBarChart('line-chart-display', data);
 			});
 		} else {
-			Data.getAqiDonut(this.props.city).then(function (data) {
-				Chart.drawDonutChart('round-chart-display', data);
+			Data.getAqiLine(this.props.city).then(function (data) {
+				Chart.drawLineChart('line-chart-display', data);
 			});
 		}
 	},
@@ -69,22 +69,22 @@ var IfeChartRound = React.createClass({
 				null,
 				React.createElement(
 					'h4',
-					{ className: this.state.tab === 'donut' ? 'active' : null,
-						onClick: this.handleTabCLick.bind(this, 'donut'),
+					{ className: this.state.tab === 'line' ? 'active' : null,
+						onClick: this.handleTabCLick.bind(this, 'line'),
 						style: tabStyle },
-					'Donut Chart'
+					'Line Chart'
 				),
 				React.createElement(
 					'h4',
-					{ className: this.state.tab === 'pie' ? 'active' : null,
-						onClick: this.handleTabCLick.bind(this, 'pie'),
+					{ className: this.state.tab === 'bar' ? 'active' : null,
+						onClick: this.handleTabCLick.bind(this, 'bar'),
 						style: tabStyle },
-					'Pie Chart'
+					'Bar Chart'
 				)
 			),
-			React.createElement('div', { id: "round-chart-display", style: chartStyle })
+			React.createElement('div', { id: "line-chart-display", style: chartStyle })
 		);
 	}
 });
 
-module.exports = IfeChartRound;
+module.exports = IfeChartLine;

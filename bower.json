@@ -1,0 +1,22 @@
+{
+  "name": "ife_data_visualization",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yjcxy12/ife_data_visualization",
+  "authors": [
+    "xiangyun.chi <xiangyun.chi@scientis.co.uk>"
+  ],
+  "main": "js/index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "react": "~0.13.3",
+    "q": "1.0.1"
+  }
+}

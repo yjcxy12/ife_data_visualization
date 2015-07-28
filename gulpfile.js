@@ -16,3 +16,7 @@ gulp.task("babel", function () {
     .pipe(babel())
     .pipe(gulp.dest("js"));
 });
+
+gulp.task("watch", function () {
+	return gulp.watch(['js/**', '!js/bower_components/**'], ['browserify']);
+});
