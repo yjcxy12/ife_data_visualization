@@ -1,0 +1,24 @@
+{
+  "name": "ife_data_visualization",
+  "version": "0.0.0",
+  "description": "",
+  "main": "js/index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjcxy12/ife_data_visualization.git"
+  },
+  "author": "yjcxy12 <yjcxy12@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yjcxy12/ife_data_visualization/issues"
+  },
+  "homepage": "https://github.com/yjcxy12/ife_data_visualization#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-browserify": "^0.5.1"
+  }
+}
