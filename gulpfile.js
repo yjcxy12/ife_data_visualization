@@ -18,5 +18,7 @@ gulp.task("babel", function () {
 });
 
 gulp.task("watch", function () {
-	return gulp.watch(['js/**', '!js/bower_components/**'], ['browserify']);
+	gulp.watch('js/components/*.jsx', ['browserify']);
+  gulp.watch('js/services/*.js', ['browserify']);
+  gulp.watch('js/index.jsx', ['browserify']);
 });
