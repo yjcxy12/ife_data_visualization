@@ -6,7 +6,7 @@ module.exports = (function () {
 		getAqiData: function () {
 			var defer = q.defer();
 
-			d3.csv("../../data/aqidata.csv", function(error, data) {
+			d3.csv("../data/aqidata.csv", function(error, data) {
 				if (error) {
 					defer.reject(error);
 				}
